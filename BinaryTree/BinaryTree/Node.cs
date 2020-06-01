@@ -36,7 +36,9 @@ namespace BinaryTree
 
         private void GenerateLevelStrings(ref string[] levelsStrings, int currentLevel = 0)
         {
-            int currentLength = (levelsStrings == null) ? 0 : levelsStrings.Length;
+            int currentLength = (levelsStrings == null) ? 
+                0 : 
+                levelsStrings.Length;
             if (currentLevel >= currentLength)
             {
                 Array.Resize(ref levelsStrings, currentLevel + 1);
@@ -45,7 +47,7 @@ namespace BinaryTree
             {
                 levelsStrings[currentLevel] = "";
             }
-            if(levelsStrings[currentLevel].Length > 0)
+            if (levelsStrings[currentLevel].Length > 0)
             {
                 levelsStrings[currentLevel] += ", ";
             }
